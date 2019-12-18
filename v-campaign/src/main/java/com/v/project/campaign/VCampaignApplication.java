@@ -4,13 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration;
 
-import javax.servlet.http.HttpServletRequest;
-
-@SpringBootApplication
-@RestController
+@SpringBootApplication(exclude = JtaAutoConfiguration.class,scanBasePackages = {"com.v.project.campaign"})
+@EntityScan(basePackages = "com.v.project.campaign.model.jpa.entity")
 public class VCampaignApplication
 {
 
@@ -22,15 +20,5 @@ public class VCampaignApplication
         LOGGER.info("==================================V Campaign启动完成==================================");
     }
 
-    @GetMapping("/helloWorld")
-    public String hello(HttpServletRequest request)
-    {
-        String host = request.getRemoteHost();
-        String reqUri = request.getRequestURI();
-        String query = request.getQueryString();
-        String method = request.getMethod();
-        String msg = "Hello Spring Cloud,I am from " + host + ",uri=" + reqUri + ",method=" + method + ",query=[" + query + "]";
-        LOGGER.info("调用helloWorld,返回结果:{}", msg);
-        return msg;
-    }
+    
 }

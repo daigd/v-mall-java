@@ -16,6 +16,12 @@
         <springboot.version>2.1.0.RELEASE</springboot.version>
         <springcloud.version>Greenwich.RELEASE</springcloud.version>
         <lombok.version>1.18.4</lombok.version>
+        <sharding-sphere.version>4.0.0-RC2</sharding-sphere.version>
+        <spring-version>5.0.8.RELEASE</spring-version>
+        <hibernate-version>5.2.17.Final</hibernate-version>
+        <hibernate-validator-version>5.3.6.Final</hibernate-validator-version>
+        <mysql-connector-java.version>5.1.42</mysql-connector-java.version>
+        <jpa.version>1.0.0.Final</jpa.version>
     </properties>
 
     <dependencyManagement>
@@ -33,6 +39,20 @@
                 <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- sharding sphere 依赖 -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding-sphere.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
 
             <!-- lombok 依赖 -->
