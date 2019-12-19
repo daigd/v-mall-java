@@ -1,11 +1,11 @@
 package com.v.project.campaign.controller;
 
+import com.v.project.campaign.model.api.CampaignTemplateIndexModel;
 import com.v.project.campaign.model.jpa.entity.CampaignTemplate;
 import com.v.project.campaign.model.jpa.service.CampaignTemplateService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -38,4 +38,14 @@ public class CampaignTemplateController
         template.setUpdatedTime(now);
         return service.save(template);
     }
+
+    @GetMapping("/{templateId}")
+    public String index(@PathVariable Long templateId)
+    {
+        CampaignTemplateIndexModel model = new CampaignTemplateIndexModel();
+        CampaignTemplate template = service.query(templateId);
+        BeanUtils.copyProperties(template, model);
+        return model.toString();
+    }
+    
 }

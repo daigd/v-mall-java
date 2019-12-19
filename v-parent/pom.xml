@@ -22,6 +22,7 @@
         <hibernate-validator-version>5.3.6.Final</hibernate-validator-version>
         <mysql-connector-java.version>5.1.42</mysql-connector-java.version>
         <jpa.version>1.0.0.Final</jpa.version>
+        <v-common.version>1.0.0-SNAPSHOT</v-common.version>
     </properties>
 
     <dependencyManagement>
@@ -80,6 +81,13 @@
                 <version>1.7.5</version>
             </dependency>
             <!-- log4j -->
+            <!-- 自定义jar包 -->
+            <dependency>
+                <groupId>com.v.project</groupId>
+                <artifactId>v-common</artifactId>
+                <version>${v-common.version}</version>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
