@@ -17,7 +17,7 @@ public class VCampaignApplication
     public static void main(String[] args)
     {
         SpringApplication.run(VCampaignApplication.class, args);
-        LOGGER.info("==================================V Campaign启动完成==================================");
+        LOGGER.info("=================V Campaign启动完成=================");
     }
 
     

@@ -47,7 +47,6 @@
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
                 <version>${sharding-sphere.version}</version>
-                <scope>import</scope>
             </dependency>
 
             <dependency>
@@ -61,7 +60,6 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-                <scope>import</scope>
             </dependency>
 
             <!-- log4j slf4j-api提供接口，slf4j-log4j提供具体的实现-->
@@ -86,7 +84,6 @@
                 <groupId>com.v.project</groupId>
                 <artifactId>v-common</artifactId>
                 <version>${v-common.version}</version>
-                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
