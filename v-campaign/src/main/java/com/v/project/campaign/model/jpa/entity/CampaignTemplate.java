@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 /**
  * @author : DaiGD
  * @createtime :  2019年12月17日 10:22
- * @description :
+ * @description : 活动定义模板
  */
 @Entity
 @Table(name = "t_campaign_template")
