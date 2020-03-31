@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author : DaiGD
@@ -20,6 +21,14 @@ public class HelloWorldController
     @GetMapping("/helloWorld")
     public String hello(HttpServletRequest request)
     {
+        try
+        {
+            TimeUnit.MILLISECONDS.sleep(20);
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
         String host = request.getRemoteHost();
         String reqUri = request.getRequestURI();
         String query = request.getQueryString();
