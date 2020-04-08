@@ -1,5 +1,7 @@
 package com.v.project.campaign.model.mybatis.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.v.project.campaign.model.mybatis.entity.CampaignTemplate;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -8,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @description :
  */
 @Mapper
-public interface ICampaignTemplateMapper
+public interface ICampaignTemplateMapper extends BaseMapper<CampaignTemplate>
 {
 }

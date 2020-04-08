@@ -1,14 +1,14 @@
 package com.v.project.campaign;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration;
 
 @SpringBootApplication(exclude = JtaAutoConfiguration.class,scanBasePackages = {"com.v.project.campaign"})
-@EntityScan(basePackages = "com.v.project.campaign.model.jpa.entity")
+@MapperScan("com.v.project.campaign.model.mybatis.mapper")
 public class VCampaignApplication
 {
 

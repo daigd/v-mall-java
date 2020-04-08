@@ -3,7 +3,7 @@ package com.v.project.campaign.model.api;
 import com.v.project.common.model.api.IDisplayModel;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author : DaiGD
@@ -17,8 +17,8 @@ public class CampaignTemplateIndexModel implements IDisplayModel
     
     private String campaignDesc;
     
-    private LocalDateTime beginTime;
+    private Date beginTime;
     
-    private LocalDateTime endTime;
+    private Date endTime;
     
 }
