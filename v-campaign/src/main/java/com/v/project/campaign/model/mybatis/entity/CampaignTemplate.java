@@ -17,7 +17,7 @@ import java.util.Date;
 @TableName("t_campaign_template")
 public class CampaignTemplate implements Serializable
 {
-    @TableId(value = "template_id", type = IdType.INPUT)
+    @TableId(value = "template_id", type = IdType.ASSIGN_ID)
     private Long templateId;
     
     private String name;
