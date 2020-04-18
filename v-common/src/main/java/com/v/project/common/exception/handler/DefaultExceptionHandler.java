@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @author : DaiGD
  * @createtime :  2020年04月18日 14:10
  * @description : 默认异常处理器
+ * 参考:https://juejin.im/post/5e7ab0bae51d45271b749815
  */
 @RestControllerAdvice
 public class DefaultExceptionHandler
