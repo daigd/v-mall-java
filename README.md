@@ -1,5 +1,5 @@
-# v-project
-微项目工程
+# v-mall-java
+基于Java实现的商城工程
 
 - [x] 引入ShardingSphere数据库中间件,实现数据分片及分布式主键功能
 - [x] 添加展示模型
