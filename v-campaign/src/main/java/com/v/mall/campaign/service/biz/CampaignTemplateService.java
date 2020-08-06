@@ -2,7 +2,6 @@ package com.v.mall.campaign.service.biz;
 
 import com.v.mall.campaign.model.mybatis.entity.CampaignTemplate;
 import com.v.mall.campaign.model.mybatis.mapper.ICampaignTemplateMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,8 +12,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class CampaignTemplateService
 {
-    @Autowired
-    private ICampaignTemplateMapper mapper;
+    private final ICampaignTemplateMapper mapper;
+
+    public CampaignTemplateService(ICampaignTemplateMapper mapper)
+    {
+        this.mapper = mapper;
+    }
 
     public Long save(CampaignTemplate campaignTemplate)
     {

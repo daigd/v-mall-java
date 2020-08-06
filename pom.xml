@@ -16,6 +16,8 @@
 
     <modules>
         <module>v-order</module>
+        <module>v-gateway</module>
+        <module>v-coupon</module>
     </modules>
     
     <profiles>
