@@ -31,6 +31,7 @@
 
     <properties>
         <project.deploy.version>1.0.0-SNAPSHOT</project.deploy.version>
+        <component.version>1.0.0-SNAPSHOT</component.version>
     </properties>
     
     <dependencyManagement>
@@ -38,12 +39,17 @@
             <dependency>
                 <groupId>org.v.component</groupId>
                 <artifactId>component-springcloud</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${component.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.v.component</groupId>
                 <artifactId>component-common</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${component.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.v.component</groupId>
+                <artifactId>component-rule-engine</artifactId>
+                <version>${component.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
